@@ -128,7 +128,7 @@
 }
 Change some of the YAML settings to see what happens.
 
-Notice, the down arrow at line 22. If you click this, you can hide the R
+Notice, the down arrow at line 25. If you click this, you can hide the R
 code chunk. This is helpful when working through a large document.
 
 On the right side of the R code chunk are additional options, Settings,
@@ -142,6 +142,7 @@ LaTeX)}\label{emphasis-r-markdown-and-latex}
 
 \emph{Sebastes} \emph{melanops}\\\emph{Sebastes melanops}
 
+<<<<<<< HEAD
 \textbf{Sebastes}\\\textbf{\emph{Sebastes}}\\\textbf{Sebastes melanops}\\\emph{\textbf{Sebastes melanops}}
 
 \section*{Headers}\label{headers}
@@ -153,6 +154,26 @@ LaTeX)}\label{emphasis-r-markdown-and-latex}
 \addcontentsline{toc}{subsubsection}{Subhead 3}
 
 \paragraph{Subhead 4}\label{subhead-4}
+=======
+\emph{Sebastes}\\
+\emph{Sebastes}
+
+\emph{Sebastes}
+
+\textbf{\emph{Sebastes}}\\
+\textbf{Sebastes}\\
+\emph{\textbf{Sebastes}}
+
+\section{Headers}\label{headers}
+>>>>>>> refs/remotes/melmonk/master
+
+\subsection{Subhead 2}\label{subhead-2}
+
+\subsubsection{Subhead 3}\label{subhead-3}
+
+\paragraph{Subhead 4}\label{subhead-4}
+
+\emph{Subhead 5}
 
 \section{Commenting}\label{commenting}
 
@@ -162,19 +183,49 @@ LaTeX)}\label{emphasis-r-markdown-and-latex}
 
 \section{Lists}\label{lists}
 
+<<<<<<< HEAD
 R Markdown are finicky with spacing\ldots{} * Item 1 * Item 2 + Item 2a
 + Item 2b
 
 \begin{itemize}
 \itemsep1pt\parskip0pt\parsep0pt
+=======
+R Markdown are finicky with spacing\ldots{}
+
+\begin{itemize}
+\tightlist
+>>>>>>> refs/remotes/melmonk/master
 \item
   Item 1
 \item
   Item 2
+<<<<<<< HEAD
 \item
   Item 2a
 \item
   Item 2b
+=======
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Item 2a
+  \item
+    Item 2b
+  \end{itemize}
+\item
+  Item 1
+\item
+  Item 2
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Item 2a
+  \item
+    Item 2b
+  \end{itemize}
+>>>>>>> refs/remotes/melmonk/master
 \end{itemize}
 
 Bulleted list
@@ -201,7 +252,14 @@ Numbered list
 
 We can reference a document section, see Lists in Section \ref{lists}.
 
+<<<<<<< HEAD
 Citations: (Love et al. 2002) Love (2002)
+=======
+Citations: (Love et al. \protect\hyperlink{ref-Love2002}{2002},
+\protect\hyperlink{ref-Love2002}{2002})
+
+Love (\protect\hyperlink{ref-Love2002}{2002})
+>>>>>>> refs/remotes/melmonk/master
 
 \section{Figure from a file}\label{figure-from-a-file}
 
@@ -216,10 +274,17 @@ You can use any file extension, including PDFs
 \begin{figure}[htbp]
 \centering
 \includegraphics{./Figures/RMarkdownFLow1.png}
+<<<<<<< HEAD
 \caption{Here's my caption 2\label{fig:fig_example2}}
 \end{figure}
 
 Figures are referenced using LaTeX syntax \ref{fig:fig_example1}.
+=======
+\caption{Here's my caption 2 \label{fig:fig_example2}}
+\end{figure}
+
+Figures are referenced using LaTeX syntax \ref{fig:fig_example}.
+>>>>>>> refs/remotes/melmonk/master
 
 Put a space between the {]} and ( above. Knit the document.
 
@@ -240,8 +305,20 @@ You can embed an R code chunk like this: \FloatBarrier
 ##  Max.   :25.0   Max.   :120.00
 \end{verbatim}
 
-Play witht the r code chunk options, echo=TRUE, include=FALSE,
+\begin{verbatim}
+##      speed           dist       
+##  Min.   : 4.0   Min.   :  2.00  
+##  1st Qu.:12.0   1st Qu.: 26.00  
+##  Median :15.0   Median : 36.00  
+##  Mean   :15.4   Mean   : 42.98  
+##  3rd Qu.:19.0   3rd Qu.: 56.00  
+##  Max.   :25.0   Max.   :120.00
+\end{verbatim}
+
+Play with the r code chunk options, echo=TRUE, include=FALSE,
 results=`asis'
+
+\FloatBarrier
 
 \section{Figure from R code chunk}\label{figure-from-r-code-chunk}
 
@@ -254,9 +331,23 @@ You can also embed plots, for example:
 \label{fig:pressure}}
 \end{figure}
 
+<<<<<<< HEAD
+=======
+This is inline math mode for Latex \(40^\circ 10^\prime\)
+
+>>>>>>> refs/remotes/melmonk/master
 Note, you need extra \textbackslash{}s when using LaTeX syntax within an
 R code chunk, or when inserting a backslash in R markdown. The same goes
-with percent signs and any other LaTeX reserved symbol.
+with percent signs and any other LaTeX reserved symbol. You can use a \%
+\(\%\)
+
+We can now reference Figure \ref{fig:pressure}. Note where this text
+ends up.
+
+Note that the \texttt{echo\ =\ FALSE} parameter was added to the code
+chunk to prevent printing of the R code that generated the plot.
+
+\FloatBarrier
 
 This is the LaTex inline math version (only one \textbackslash{}):
 \(40^\circ 10^\prime\)
@@ -280,6 +371,7 @@ chunk to prevent printing of the R code that generated the plot.
   \hline
 Sample & Test1 & Test2 & Test3 & Test4 & Test5 & Test6 & Test7 & Test8 & Test9 & Test10 \\ 
   \hline
+<<<<<<< HEAD
   1 & 333000000000.00 & 97.00 &  45 & 7169 & 5656 & 2642 & 8534 & 9173.00 & 230 & 2733 \\ 
     3 & 345.00 & 976.00 &   6 & 105 & 6382 & 2277 & 5848 & 7339495403.00 & 8613 & 5025 \\ 
     5 & 34.00 & 3333333333.00 &   7 & 2395 & 5632 & 5542 & 1645 & 380.00 & 1263 & 6728 \\ 
@@ -362,6 +454,13 @@ X & X.1 & X.2 & X.3 & X.4 & X.5 & X.6 & X.7 & X.8 & X.9 & X.10 & X.11 & X.12 & X
   SB2015 & 353 &  & 392 & 249 & 229 & 55 &  & 287 & 398 & 320 & 469 & 410 & 378 & 49 &  & 353 & 357 & 363 & 222 & 406 \\ 
   SB2015/SB0 & 33\% &  & 38\% & 25\% & 21\% & 5\% &  & 40\% & 36\% & 30\% & 38\% & 39\% & 36\% & 46\% &  & 29\% & 34\% & 35\% & 19\% & 29\% \\ 
   Yield at SPR50\% & 319 &  & 325 & 299 & 300 & 265 &  & 336 & 326 & 314 & 321 & 319 & 324 & 373 &  & 320 & 318 & 318 & 335 & 319 \\ 
+=======
+1 & 333000000000 & 97 & 45 & 7169 & 5656 & 2642 & 8534 & 9173 & 230 & 2733 \\ 
+  3 & 345 & 976 & 6 & 105 & 6382 & 2277 & 5848 & 7339495403 & 8613 & 5025 \\ 
+  5 & 34 & 3333333333 & 7 & 2395 & 5632 & 5542 & 1645 & 380 & 1263 & 6728 \\ 
+  7 & 234 & 34 & 46 & 5619 & 6063 & 8973 & 9362 & 1870 & 7651 & 683 \\ 
+  9 & 234 & 0 & 45 & 6531 & 6824 & 3609 & 7627 & 3363 & 1534 & 8333 \\ 
+>>>>>>> refs/remotes/melmonk/master
    \hline
 \end{tabular}
 }
@@ -386,8 +485,14 @@ You can use LaTeX math mode both inline and for inserting equations.
 It's handy for using inline math mode for management measure and
 lat/long.
 
+<<<<<<< HEAD
 Inline looks like this: \(SPR_{40\%}\)\\*Note the \% sign has a ~when
 used in math mode, but not in R markdown text.
+=======
+Inline looks like this: \(SPR_{40\%}\)\\
+*Note the \% sign has a ~when used in math mode, but not in R markdown
+text.
+>>>>>>> refs/remotes/melmonk/master
 
 To get degrees and minutes type: \(40^\circ 10^\prime\)
 
