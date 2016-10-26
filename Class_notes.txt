@@ -1,2 +1,7 @@
 .gitignore file: allows you to include certain files that won't upload to GitHub
+
 Deleting portions of commints (that may contain sensitive info, like passwords): git-reset Hard or fetch
+
+Citation keys indicate what reference you are using.
+BibFile created by Zotero or bib software provides the citation keys to use
+.csl file is the citation style that will be used in the document

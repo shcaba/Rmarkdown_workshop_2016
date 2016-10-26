@@ -1,0 +1,1 @@
+.gitignore file: allows you to include certain files that won't upload to GitHub
